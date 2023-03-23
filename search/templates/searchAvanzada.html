@@ -1,0 +1,28 @@
+{% extends 'avanzada.html' %}
+
+{% block content %}
+
+{% if final_result.0|length > 0 %}
+    <b style="padding: 10px 90px; color: #646464">Resultados ({{ final_result.0|length }}):</b>
+    {% if final_result.1 %}
+    <b style="padding: 10px 90px; color: #646464">Se muestran resultados para: {% for palabra in final_result.1 %}{{palabra}}, {% endfor %}</b>
+    {% endif %}
+    {% if final_result.2 %}
+    <b style="padding: 10px 90px; color: #646464">Tal vez quizo decir: {% for palabra in final_result.2 %}{{palabra}} {% endfor %}</b>
+    {% endif %}
+    {% for result in final_result.0 %}
+        <div style="padding: 0 100px">
+            <h3 style="color: blue;"><a href="">{{ result.0 }}</a></h3>
+            <h3 style="color: green">{{result.1}}</h3>
+            <h3 style="color: grey"> {{ result.2 }}</h3>
+            <br>
+        </div>
+        <br><br>
+    {% endfor %}
+{% else%}
+    <b style="padding: 0 90px; color: #646464;" id="web-result-id">No se encontraron resultados</b>
+{% endif %}
+
+
+
+{% endblock %}
