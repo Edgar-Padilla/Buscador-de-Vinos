@@ -1,7 +1,7 @@
 # Resumen
 Este es un buscador tipo google, se basa en técnicas de recuperación de información y se realiza mediante Python utilizando el framwork Django
 # Descripción
-El buscador tiene un serchbar en donde se escribe lo que se desea consultar.
+El buscador tiene un searchbar en donde se escribe lo que se desea consultar.
 ![Captura desde 2023-07-01 12-18-49](https://github.com/Edgar-Padilla/Buscador-de-Vinos/assets/97701913/d9993355-19dd-45e9-90d8-b70823a70280)
 
 Como respuesta se obtendrán los 20 resultados más similares a la consulta realizada.
